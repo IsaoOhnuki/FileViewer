@@ -1,11 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FileViewer.Views.MainPage"
+             xmlns:Views="clr-namespace:FileViewer.Views"
              Title="{Binding Title}">
-
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
-
-</ContentPage>
+    <MasterDetailPage.Master>
+        <!-- Hamburger Menu Secret Sauce... Add an Icon!!!! Make sure it's in your resources for your Platform Project -->
+        <NavigationPage Title="Required Foo" Icon="hamburger.png">
+            <x:Arguments>
+                <StackLayout Padding="4">
+                    <Button Text="ShowPage2" Command="{Binding ShowPage2Command}" CommandParameter="ShowPage2"/>
+                    <Button Text="ShowMenu2" Command="{Binding ShowMenu2Command}" CommandParameter="ShowMenu2"/>
+                </StackLayout>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

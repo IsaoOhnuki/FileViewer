@@ -7,8 +7,8 @@ using Xamarin.Forms;
 
 namespace FileViewer.Views
 {
-	public partial class MainPage : ContentPage
-	{
+	public partial class MainPage : MasterDetailPage
+    {
 		public MainPage ()
 		{
 			InitializeComponent ();

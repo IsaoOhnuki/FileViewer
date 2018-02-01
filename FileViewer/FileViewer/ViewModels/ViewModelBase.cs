@@ -28,7 +28,7 @@ namespace FileViewer.ViewModels
             
         }
 
-        public virtual void OnNavigatedTo(NavigationParameters parameters)
+        public virtual void OnNavigatedToAsync(NavigationParameters parameters)
         {
             
         }
@@ -41,6 +41,11 @@ namespace FileViewer.ViewModels
         public virtual void Destroy()
         {
             
+        }
+
+        public void OnNavigatedTo(NavigationParameters parameters)
+        {
+
         }
     }
 }

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="FileViewer.Views.ViewPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="MP" Command="{Binding ShowMPCommand}" />
+        <ToolbarItem Text="File" Command="{Binding OpenCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView Grid.Row="1" Orientation="Both" BackgroundColor="MidnightBlue">
+        <!--<Label BackgroundColor="DarkTurquoise" Text="0&#xd;&#xa;1&#xd;&#xa;2&#xd;&#xa;3&#xd;&#xa;4&#xd;&#xa;5&#xd;&#xa;6&#xd;&#xa;7&#xd;&#xa;8&#xd;&#xa;9&#xd;&#xa;0&#xd;&#xa;1&#xd;&#xa;2&#xd;&#xa;3&#xd;&#xa;4&#xd;&#xa;5&#xd;&#xa;6&#xd;&#xa;7&#xd;&#xa;8&#xd;&#xa;9&#xd;&#xa;0&#xd;&#xa;1&#xd;&#xa;2&#xd;&#xa;3&#xd;&#xa;4&#xd;&#xa;5&#xd;&#xa;6&#xd;&#xa;7&#xd;&#xa;8&#xd;&#xa;9&#xd;&#xa;0&#xd;&#xa;1&#xd;&#xa;2&#xd;&#xa;3&#xd;&#xa;4&#xd;&#xa;5&#xd;&#xa;6&#xd;&#xa;7&#xd;&#xa;8&#xd;&#xa;9&#xd;&#xa;"/>-->
+        <Label BackgroundColor="DarkTurquoise" Text="{Binding Text}"/>
+    </ScrollView>
+</ContentPage>

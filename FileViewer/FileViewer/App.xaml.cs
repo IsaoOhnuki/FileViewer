@@ -24,13 +24,32 @@ namespace FileViewer
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("MainPage/NavigationPage/ViewPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<ViewPage>();
+            containerRegistry.RegisterForNavigation<ViewPage2>();
+            containerRegistry.RegisterForNavigation<MenuPage>();
+            containerRegistry.RegisterForNavigation<MenuPage2>();
+        }
+
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
+
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
         }
     }
 }
